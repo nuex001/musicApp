@@ -1,0 +1,322 @@
+* {
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+    list-style: none;
+}
+
+:root {
+    --color: #fff;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: monospace;
+}
+
+.container {
+    width: 400px;
+    height: 500px;
+    box-shadow: 0px 0px 5px 0px rgba(225, 225, 225, 0.7);
+    border-radius: 5px;
+    position: relative;
+    padding: 10px 20px;
+    overflow: hidden;
+    /* background-image: url("./images/Bella_Shmurda_ft_Drey_Spencer.jpg");
+    background-size: 100% 100%;
+    background-repeat: none; */
+}
+
+.container nav {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 17px;
+    /* border: 2px solid var(--color); */
+    color: var(--color);
+}
+
+.container nav .box:last-child li:first-child {
+    transform: rotate(90deg);
+    margin-right: 10px;
+}
+
+.container nav li {
+    transition: 500ms ease-in-out;
+    cursor: pointer;
+}
+
+.container nav li:hover {
+    color: green;
+}
+
+.container .display {
+    width: 100%;
+    height: auto;
+}
+
+.container .display img {
+    display: block;
+    margin: 10px auto;
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px 0px rgba(225, 225, 225, 0.7);
+}
+
+.container .content {
+    width: 100%;
+    height: 50px;
+    margin: 15px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+    /* border:2px solid #fff; */
+    color: var(--color);
+    font-size: 16px;
+}
+
+.container .content li:first-child,
+.container .content li:last-child {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.container .content li:first-child:hover,
+.container .content li:last-child:hover {
+    color: green;
+}
+
+.container .content li:nth-child(2) {
+    display: flex;
+    max-width: 75%;
+    white-space: nowrap;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: left;
+    text-align: center;
+}
+
+.container li span.artist {
+    opacity: 0.7;
+    font-size: 12px;
+    margin: 5px 0px;
+}
+
+.container .controls {
+    width: 100%;
+    height: 100px;
+    margin-top: 20px;
+    /* border:2px solid #fff; */
+}
+
+.container .progressCont {
+    width: 100%;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    color: var(--color);
+    justify-content: space-between;
+    /* border:2px solid #fff; */
+}
+
+.progress_bar {
+    width: 70%;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.proggression {
+    width: 0%;
+    height: 100%;
+    border-radius: 5px;
+    background-color: green;
+    transition: width 0.1s linear;
+    position: relative;
+}
+
+.proggression::before {
+    content: "";
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    right: -5px;
+    top: 50%;
+    background-color: green;
+}
+
+.container .controlBtns {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    color: var(--color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container .controlBtns .round {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 5px 0px rgba(225, 225, 225, 0.7);
+    cursor: pointer;
+    font-size: 17px;
+    transition: 500ms ease-in-out;
+}
+
+.container .controlBtns li {
+    transition: 500ms ease-in-out;
+    cursor: pointer;
+}
+
+.container .controlBtns li:hover {
+    color: green;
+}
+
+.container .controlBtns .round:hover {
+    color: green;
+}
+
+.container ul.lists {
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    bottom: 0%;
+    left: -0.1%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: inherit;
+    border-bottom-left-radius: inherit;
+    z-index: 5;
+    background-color: var(--color);
+    padding: 20px 15px;
+    overflow-y: scroll;
+    transition: 500ms ease-in-out;
+    transform-origin: bottom;
+    transform: translateY(100%);
+    opacity: 0;
+    scrollbar-width: none;
+}
+.container ul.lists::-webkit-scrollbar{
+display: none;
+}
+
+.container ul.lists.active {
+    transform: translateY(0%);
+    opacity: 1;
+}
+
+.container ul.lists .row {
+    display: flex;
+    cursor: pointer;
+    margin: 20px 0px;
+    justify-content: space-between;
+    align-items: center;
+    color: #333;
+}
+
+.container ul.lists .nav{
+    display: flex;
+    cursor: pointer;
+    margin: 20px 0px;
+    justify-content: space-between;
+    align-items: center;
+    color: #333;
+    margin-top: 0px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.container ul.lists .row li {
+    transition: 500ms ease-in-out;
+}
+
+.container ul.lists .row li:hover {
+    color: green;
+}
+
+.container ul.lists .nav li.no {
+    font-size: 10px;
+}
+
+.container ul.lists .row .subBox {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 0px;
+    gap: 3px;
+}
+
+.container ul.lists .row .subBox li:first-child {
+    width: 30px;
+    height: 15px;
+    align-items: flex-end;
+    gap: 2px;
+    display: none;
+}
+
+.container ul.lists .row.active {
+    color: green
+}
+
+.container ul.lists .row.active .subBox li:first-child {
+    display: flex;
+}
+
+.container ul.lists .row li span {
+    border: 2px solid green;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    height: inherit;
+    margin: 0px;
+}
+
+/* .container ul.lists .row li span {
+} */
+.container ul.lists .row li span:first-child {
+    height: 10px;
+    animation: beats1 linear 1s infinite;
+}
+
+.container ul.lists .row li span:nth-child(2) {
+    height: 14px;
+    animation: beats2 linear 0.5s infinite 0.6s;
+}
+
+.container ul.lists .row li span:last-child {
+    height: 7px;
+    animation: beats3 linear 0.5s infinite 0.9s;
+}
+
+@keyframes beats1 {
+    100% {
+        height: 15px;
+    }
+}
+
+@keyframes beats2 {
+    100% {
+        height: 10px;
+    }
+}
+
+@keyframes beats3 {
+    100% {
+        height: 15px;
+    }
+}

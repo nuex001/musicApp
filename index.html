@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUSIC APP</title>
+    <link rel="stylesheet" href="style.css"> <!-- linking my css file -->
+    <link rel="stylesheet" href="./fa/css/font-awesome.css"> <!-- linking my font awesome file locally -->
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <div class="box">
+                <li class="fa fa-arrow-left"></li>
+            </div>
+            <div class="box">
+                <li class="fa fa-th-list"></li>
+                <li class="fa fa-ellipsis-v"></li>
+            </div>
+        </nav>
+        <div class="display">
+            <img src="./images/Abochi-Bestie.jpg" alt="">
+        </div>
+        <ul class="content">
+            <li class="fa fa-clock-o"></li>
+            <li>
+                <span class="songName">Alan Walker &ISAK - Sorry(Official)</span>
+                <span class="artist">Ajebo Hustlers</span>
+            </li>
+            <li class="fa fa-heart-o"></li>
+        </ul>
+        <div class="controls">
+            <audio src="" style="display:none"></audio>
+            <div class="progressCont">
+                <li class="currentTime">3:10</li>
+                <div class="progress_bar">
+                    <div class="proggression"></div>
+                </div>
+                <li class="duration">3:10</li>
+            </div>
+            <div class="controlBtns ">
+                <li class="fa fa-repeat"></li>
+                <li class="fa fa-backward" id="prev"></li>
+                <div class="round" id="play">
+                    <li class="fa fa-play" id="icon"></li>
+                </div>
+                <!-- <li class="fa fa-play"></li> -->
+                <li class="fa fa-forward" id="next"></li>
+                <li class="fa fa-bars" id="musisListBtn"></li>
+            </div>
+        </div>
+        <ul class="lists">
+            <div class="nav">
+                <li class="fa fa-times" onclick="showList()"></li>
+                <li>playing Queue span</li>
+                <li class="no">125</li>
+            </div>
+            <div class="row" data-index="0">
+                <li class="fa fa-ellipsis-h"></li>
+                <li>a.sinach(Sinach)</li>
+                <div class="subBox">
+                    <li>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </li>
+                    <li class="fa fa-times" id="removeBtn"></li>
+                </div>
+            </div>
+            <div class="row" data-index="1">
+                <li class="fa fa-ellipsis-h"></li>
+                <li>Abochi-Bestie(Abochi)</li>
+                <div class="subBox">
+                    <li>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </li>
+                    <li class="fa fa-times" id="removeBtn"></li>
+                </div>
+            </div>
+            <div class="row" data-index="2">
+                <li class="fa fa-ellipsis-h"></li>
+                <li>Bella_Shmurda_ft_Drey_Spencer(Bella_Shmurda)</li>
+                <div class="subBox">
+                    <li>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </li>
+                    <li class="fa fa-times" id="removeBtn"></li>
+                </div>
+            </div>
+            <div class="row" data-index="3">
+                <li class="fa fa-ellipsis-h"></li>
+                <li>Bulie-preye_odede(Bulie-preye)</li>
+                <div class="subBox">
+                    <li>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </li>
+                    <li class="fa fa-times" id="removeBtn"></li>
+                </div>
+            </div>
+            <div class="row" data-index="4">
+                <li class="fa fa-ellipsis-h"></li>
+                <li>Chike_-_Watching_over(Chike)</li>
+                <div class="subBox">
+                    <li>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </li>
+                    <li class="fa fa-times" id="removeBtn"></li>
+                </div>
+            </div>
+            <div class="row" data-index="5">
+                <li class="fa fa-ellipsis-h"></li>
+                <li>Chike_-Forgive(Chike)</li>
+                <div class="subBox">
+                    <li>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </li>
+                    <li class="fa fa-times" id="removeBtn"></li>
+                </div>
+            </div>
+            <div class="row" data-index="6">
+                <li class="fa fa-ellipsis-h"></li>
+                <li>Godzilla(Eminem)</li>
+                <div class="subBox">
+                    <li>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </li>
+                    <li class="fa fa-times" id="removeBtn"></li>
+                </div>
+            </div>
+            <div class="row" data-index="7">
+                <li class="fa fa-ellipsis-h"></li>
+                <li>Justin Bieber - Intentions(Justin)</li>
+                <div class="subBox">
+                    <li>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </li>
+                    <li class="fa fa-times" id="removeBtn"></li>
+                </div>
+            </div>
+            <div class="row" data-index="8">
+                <li class="fa fa-ellipsis-h"></li>
+                <li>Stainless(Simi)</li>
+                <div class="subBox">
+                    <li>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </li>
+                    <li class="fa fa-times" id="removeBtn"></li>
+                </div>
+            </div>
+        </ul>
+    </div>
+</body>
+<script src="main.js"></script>
+
+</html>
+
+<!-- 
+    icon
+play 
+pause
+backward
+forward
+ -->
