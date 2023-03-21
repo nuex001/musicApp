@@ -209,11 +209,6 @@ musisListBtn.addEventListener("click", showList)
 //     removeBtn.addEventListener("click", removeRow);
 // })
 
-/**
- * @LISTS
- * because of remove a single list from my music lists,i had to use HTML Atrribute(dataSet) to store my index and reference to it on my js file,instead of using default arry idx
- */
-
 
 window.addEventListener("load", () => {
     loadmusic(0);
